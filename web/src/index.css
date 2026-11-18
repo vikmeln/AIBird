@@ -1,0 +1,566 @@
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #26392e;
+  background: #f6f8f5;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  letter-spacing: -1px;
+}
+
+.muted {
+  color: #78887d;
+  line-height: 1.6;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: #28734f;
+  color: white;
+  border-radius: 12px;
+}
+
+.primary-button {
+  border: none;
+  border-radius: 11px;
+  background: #287952;
+  color: white;
+  padding: 13px 20px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: #1d6040;
+}
+
+.outline-button {
+  border: 1px solid #d5e2d8;
+  border-radius: 11px;
+  background: white;
+  color: #315d43;
+  padding: 11px 16px;
+  font-weight: 500;
+}
+
+.outline-button:hover:not(:disabled) {
+  background: #edf5ef;
+}
+
+.error,
+.success {
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.error {
+  background: #fff0ef;
+  color: #b43a3a;
+}
+
+.success {
+  background: #e8f5eb;
+  color: #227447;
+}
+
+.auth-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.auth-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 10%;
+  background: #e4efe5;
+}
+
+.auth-intro h1 {
+  max-width: 540px;
+  margin: 55px 0 22px;
+  font-size: clamp(38px, 4vw, 60px);
+  line-height: 1.12;
+}
+
+.auth-intro > p {
+  max-width: 460px;
+  color: #637968;
+  line-height: 1.8;
+}
+
+.intro-note span {
+  color: #2b8557;
+  font-weight: 700;
+}
+
+.auth-panel {
+  display: grid;
+  place-items: center;
+  padding: 35px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 410px;
+}
+
+.auth-card h2 {
+  margin: 12px 0;
+  font-size: 32px;
+}
+
+.auth-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin: 22px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #d8e4dc;
+  border-radius: 11px;
+  background: white;
+  outline-color: #287952;
+}
+
+.auth-card > .primary-button {
+  width: 100%;
+}
+
+.auth-switch {
+  margin-top: 22px;
+  text-align: center;
+  color: #7e8d83;
+  font-size: 14px;
+}
+
+.auth-switch button {
+  border: none;
+  background: transparent;
+  color: #287952;
+  font-weight: 700;
+  margin-left: 7px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 5%;
+  background: white;
+  border-bottom: 1px solid #e5ece6;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 42px 24px 75px;
+}
+
+.page-heading h1,
+.content > h1 {
+  margin: 10px 0;
+  font-size: 36px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+  margin: 28px 0;
+}
+
+.stat {
+  padding: 23px;
+  border: 1px solid #e4ece5;
+  border-radius: 16px;
+  background: white;
+}
+
+.stat span {
+  display: block;
+  color: #7e8e82;
+  font-size: 14px;
+}
+
+.stat strong {
+  display: block;
+  margin-top: 12px;
+  color: #26754d;
+  font-size: 32px;
+}
+
+.upload-card,
+.analysis-card,
+.empty-state,
+.wallet-card,
+.admin-content {
+  border: 1px solid #e4ece5;
+  border-radius: 17px;
+  background: white;
+}
+
+.upload-card {
+  padding: 28px;
+}
+
+.upload-card h2 {
+  margin: 10px 0;
+}
+
+.upload-area {
+  display: block;
+  margin: 24px 0 20px;
+  border: 2px dashed #b7d4bc;
+  border-radius: 15px;
+  background: #f8fbf8;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.upload-area input {
+  display: none;
+}
+
+.upload-area img {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  padding: 12px;
+  object-fit: contain;
+}
+
+.upload-placeholder {
+  display: flex;
+  min-height: 210px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.upload-placeholder small {
+  color: #8b9b8f;
+}
+
+.upload-symbol {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #e2f1e5;
+  color: #287952;
+  font-size: 28px;
+}
+
+.analyze-button {
+  min-width: 215px;
+}
+
+.wallet-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+  padding: 27px;
+}
+
+.wallet-card h2 {
+  margin: 10px 0;
+}
+
+.wallet-card .muted {
+  max-width: 480px;
+}
+
+.wallet-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 200px;
+}
+
+.wallet-actions button {
+  width: 100%;
+}
+
+.history-section {
+  margin-top: 40px;
+}
+
+.section-heading,
+.analysis-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  margin: 10px 0 0;
+}
+
+.analysis-list {
+  display: grid;
+  gap: 15px;
+}
+
+.analysis-card {
+  padding: 24px;
+}
+
+.analysis-top h3 {
+  margin-bottom: 6px;
+  overflow-wrap: anywhere;
+}
+
+.analysis-top small {
+  color: #899a8d;
+}
+
+.status {
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #fff3dd;
+  color: #987122;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.status.done {
+  background: #e5f4e9;
+  color: #25754b;
+}
+
+.predictions {
+  margin-top: 18px;
+}
+
+.prediction {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 13px 0;
+  border-top: 1px solid #edf1ed;
+}
+
+.prediction strong {
+  color: #26774e;
+}
+
+.bird-description {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f2f8f3;
+  border-radius: 10px;
+}
+
+.bird-description p {
+  margin: 8px 0 0;
+  color: #6b806f;
+  line-height: 1.6;
+}
+
+.empty-state {
+  padding: 35px;
+  text-align: center;
+  color: #87978a;
+}
+
+.footer-note {
+  margin-top: 25px;
+  text-align: center;
+  color: #8a998d;
+  font-size: 13px;
+}
+
+.admin-content {
+  padding: 24px;
+}
+
+.admin-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.admin-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.admin-tabs button {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 17px;
+  background: #eff4f0;
+  color: #5c7161;
+}
+
+.admin-tabs button.active {
+  background: #287952;
+  color: white;
+}
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e9eee9;
+}
+
+.admin-table th {
+  background: #f5f8f5;
+  color: #728477;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.admin-table td {
+  overflow-wrap: anywhere;
+}
+
+.empty-text {
+  padding: 25px 0;
+  color: #8b998d;
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .auth-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-intro {
+    padding: 35px 25px;
+  }
+
+  .auth-intro h1 {
+    margin: 28px 0 15px;
+  }
+
+  .auth-panel {
+    padding: 40px 25px;
+  }
+
+  .topbar,
+  .account {
+    flex-wrap: wrap;
+  }
+
+  .content {
+    padding: 30px 16px;
+  }
+
+  .content > h1,
+  .page-heading h1 {
+    font-size: 29px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .upload-card,
+  .analysis-card,
+  .wallet-card,
+  .admin-content {
+    padding: 20px;
+  }
+
+  .wallet-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .wallet-actions {
+    width: 100%;
+  }
+
+  .admin-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

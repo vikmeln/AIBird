@@ -1,0 +1,49 @@
+# Конфигурация и секретные данные
+.env
+.env.*
+!.env.example
+docker-compose.yml
+**/appsettings.Development.json
+**/*.pem
+**/*.key
+
+# ASP.NET Core
+.vs/
+**/bin/
+**/obj/
+**/*.user
+**/*.suo
+**/TestResults/
+
+# Python
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.pyc
+**/.pytest_cache/
+
+# React и React Native
+**/node_modules/
+**/.expo/
+**/dist/
+**/build/
+**/.metro-cache/
+
+# Solidity и Foundry
+smart_contracts/cache/
+smart_contracts/out/
+smart_contracts/broadcast/
+**/anvil-state*.json
+
+# Загруженные изображения и кеш модели
+**/uploads/
+**/hf_cache/
+
+# Настройки редакторов
+**/.vscode/
+**/.idea/
+**/.claude/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
